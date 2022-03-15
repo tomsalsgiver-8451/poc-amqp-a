@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  rabbitmq:
+    image: rabbitmq:3.9.13-management
+    container_name: rabbitmq
+    restart: always
+    ports:
+      - 5672:5672
+      - 15672:15672
+    volumes:
+      - ./rabbit_enabled_plugins:/etc/rabbitmq/enabled_plugins
